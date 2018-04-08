@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { MemberComponent } from './member/member.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -15,18 +16,8 @@ import { MemberComponent } from './member/member.component';
     MemberComponent
   ],
   imports: [
-    BrowserModule
-     RouterModule.forRoot( [
-       {
-          path: 'Member',
-         component: MemberComponent
-       }
-       ,
-       {
-        path: 'Product',
-        component: ProductComponent
-      }
-     ])
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
